@@ -1,16 +1,25 @@
-<html lang="en">
-<head>
-  <meta charset="utf-8">
 
-  <title>The HTML5 Herald</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
-
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
-<b> hello </b>
-</head>
-
+<!DOCTYPE html>
+<html>
 <body>
-  <script src="js/scripts.js"></script>
+
+<p id="demo"></p>
+
+<script>
+  var greeting = "";
+  var d = new Date();
+  var time = d.getHours();
+  if (time < 10) {
+    greeting = "Good morning";
+  } else if (time < 20) {
+    greeting = "Good day";
+  } else {
+    greeting = "Good evening";
+  }
+
+  greeting =  "<h2>" + greeting + " ! </h2>"
+  document.getElementById("demo").innerHTML = greeting;
+</script>
+
 </body>
 </html>
